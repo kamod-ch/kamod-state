@@ -1,0 +1,28 @@
+{
+  "name": "kamod-state",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Tiny, typed reducer state management built for Preact.",
+  "license": "MIT",
+  "type": "module",
+  "packageManager": "pnpm@10.33.0",
+  "workspaces": ["packages/*"],
+  "scripts": {
+    "prepublishOnly": "node -e \"console.error('Do not publish the workspace root. Use: pnpm publish:core'); process.exit(1)\"",
+    "build:core": "pnpm --filter @kamod-ch/state build",
+    "test:core": "pnpm --filter @kamod-ch/state test",
+    "typecheck:core": "pnpm --filter @kamod-ch/state typecheck",
+    "build:docs": "pnpm --filter @kamod-ch/state-docs build",
+    "check:docs": "pnpm --filter @kamod-ch/state-docs check",
+    "build": "pnpm run build:core && pnpm run build:docs",
+    "test": "pnpm run test:core",
+    "typecheck": "pnpm run typecheck:core",
+    "docs:dev": "pnpm --filter @kamod-ch/state-docs dev",
+    "docs:check": "pnpm run check:docs",
+    "docs:build": "pnpm run build:docs",
+    "pack:core": "pnpm --filter @kamod-ch/state exec npm pack --dry-run"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.29.6"
+  }
+}

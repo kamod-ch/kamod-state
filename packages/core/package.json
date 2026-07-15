@@ -1,0 +1,40 @@
+{
+  "name": "@kamod-ch/state",
+  "version": "0.1.0",
+  "description": "Tiny, typed reducer state management built for Preact.",
+  "keywords": ["preact", "state", "reducer", "actions", "typescript", "kamod"],
+  "type": "module",
+  "license": "MIT",
+  "author": "Klaus Zahiragic <watzak>",
+  "repository": { "type": "git", "url": "git+https://github.com/kamod-ch/kamod-state.git", "directory": "packages/core" },
+  "homepage": "https://github.com/kamod-ch/kamod-state#readme",
+  "bugs": { "url": "https://github.com/kamod-ch/kamod-state/issues" },
+  "funding": { "type": "github", "url": "https://github.com/sponsors/kamod-ch" },
+  "publishConfig": { "access": "public" },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": { "types": "./dist/index.d.ts", "import": "./dist/index.js" },
+    "./preact": { "types": "./dist/preact.d.ts", "import": "./dist/preact.js" },
+    "./middleware": { "types": "./dist/middleware.d.ts", "import": "./dist/middleware.js" },
+    "./testing": { "types": "./dist/testing.d.ts", "import": "./dist/testing.js" },
+    "./signals": { "types": "./dist/signals.d.ts", "import": "./dist/signals.js" }
+  },
+  "files": ["dist", "README.md", "LICENSE"],
+  "sideEffects": false,
+  "scripts": { "build": "tsup", "typecheck": "tsc --noEmit", "test": "vitest run", "test:watch": "vitest" },
+  "peerDependencies": { "preact": "^10.19.0" },
+  "peerDependenciesMeta": { "preact": { "optional": true }, "@kamod-ch/signals": { "optional": true }, "@preact/signals": { "optional": true } },
+  "devDependencies": {
+    "@preact/signals": "^2.0.0",
+    "@testing-library/preact": "^3.2.4",
+    "@types/node": "^24.0.0",
+    "jsdom": "^26.0.0",
+    "preact": "^10.26.0",
+    "preact-render-to-string": "^6.5.0",
+    "tsup": "^8.3.0",
+    "typescript": "^5.7.0",
+    "vitest": "^2.1.0"
+  },
+  "engines": { "node": ">=20.11" }
+}
