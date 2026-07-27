@@ -20,9 +20,11 @@
     "docs:dev": "pnpm --filter @kamod-ch/state-docs dev",
     "docs:check": "pnpm run check:docs",
     "docs:build": "pnpm run build:docs",
+    "brand:readme": "kamod-brand-readme --product State --output .github/assets",
     "pack:core": "pnpm --filter @kamod-ch/state exec npm pack --dry-run"
   },
   "devDependencies": {
-    "@changesets/cli": "^2.29.6"
+    "@changesets/cli": "^2.29.6",
+    "@kamod-ch/brand": "^0.1.0"
   }
 }

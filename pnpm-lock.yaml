@@ -11,6 +11,9 @@ importers:
       '@changesets/cli':
         specifier: ^2.29.6
         version: 2.31.0(@types/node@24.13.3)
+      '@kamod-ch/brand':
+        specifier: ^0.1.0
+        version: 0.1.0(preact@10.29.7)
 
   packages/core:
     devDependencies:
@@ -48,6 +51,9 @@ importers:
         specifier: workspace:*
         version: link:../core
     devDependencies:
+      '@kamod-ch/brand':
+        specifier: ^0.1.0
+        version: 0.1.0(preact@10.29.7)
       '@kamod-ch/preactpress':
         specifier: ^2.0.0
         version: 2.2.0(@babel/core@7.29.7)(@types/node@24.13.3)(esbuild@0.27.7)(rollup@4.62.2)
@@ -591,6 +597,12 @@ packages:
 
   '@jridgewell/trace-mapping@0.3.31':
     resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
+
+  '@kamod-ch/brand@0.1.0':
+    resolution: {integrity: sha512-OlvFptU4FYa4sM4F10LQEWvOuA0in5aLQQVT1runf8ZbvVzLxRcYx7LZBHoBysjxHgIN3uue+b06kYnZ61UvGg==}
+    hasBin: true
+    peerDependencies:
+      preact: '>=10'
 
   '@kamod-ch/preactpress@2.2.0':
     resolution: {integrity: sha512-dmY/IncdpX5bAxaFwAZJr/QvBgdYcCR4tg+E5g4b/gq3+X3l2vqyW6yrgjZfdaaos644JZsToQF/vc2WcYYHHQ==}
@@ -3660,6 +3672,10 @@ snapshots:
     dependencies:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.5
+
+  '@kamod-ch/brand@0.1.0(preact@10.29.7)':
+    dependencies:
+      preact: 10.29.7(preact-render-to-string@6.7.0)
 
   '@kamod-ch/preactpress@2.2.0(@babel/core@7.29.7)(@types/node@24.13.3)(esbuild@0.27.7)(rollup@4.62.2)':
     dependencies:
