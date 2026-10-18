@@ -32,7 +32,7 @@ export function createStoreContext<S, A extends Action = Action>(options: StoreC
     const store = useStore();
     const selectorRef = useRef(selector);
     const equalityRef = useRef(equalityFn);
-    const lastRef = useRef<{ state: S; selected: TSelected }>();
+    const lastRef = useRef<{ state: S; selected: TSelected } | undefined>(undefined);
     selectorRef.current = selector;
     equalityRef.current = equalityFn;
 

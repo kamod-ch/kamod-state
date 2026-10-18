@@ -9,7 +9,7 @@ export default defineConfig({
     signals: "src/signals.ts"
   },
   format: ["esm"],
-  dts: true,
+  dts: false,
   sourcemap: true,
   clean: true,
   treeshake: true,
