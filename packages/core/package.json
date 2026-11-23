@@ -39,7 +39,7 @@
     "preact-render-to-string": "^6.8.3",
     "tsup": "^9.0.0",
     "typescript": "~7.0.2",
-    "vitest": "^5.1.0"
+    "vitest": "^5.1.1"
   },
   "engines": { "node": ">=20.11" }
 }
